@@ -1,0 +1,109 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+/* navigationPane */
+nav {background-color: #F85559; border-radius: 50px; width: 90%; margin: auto; margin-top: 10px;display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding: 0 20px; height: 80px;}
+/* links */
+nav ul a{color: white; text-decoration: none;padding: 7px 13px; border-radius: 50px;}
+/* logo */
+nav label.logo {display: flex; flex-direction: row; justify-content: center; align-items: center;}
+nav label.logo span {color: white; font-size: 30px; margin: 0 0 0 10px;}
+/* search */
+nav input[type=search] {padding: 7px 13px; border: none; border-radius: 50px; background: white url('search2.png') no-repeat center; background-size: 18px; background-position-x: 160px;}
+/* phoneMenu */
+#cb {display: none;}
+.menuIcon {display: none;}
+
+
+/* header */
+header {width: 90%; margin: auto; height: 55vh; border-radius: 10px; background: url('bgHeader.png') no-repeat scroll; background-size: 100% 100%; margin-top: 50px;}
+header div {background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(128, 128, 128, 0.323)); height: 100%; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; padding-top: 50px;}
+header div h1, header div p, header div button {color: white; margin-bottom: 20px;}
+header div button {padding: 7px 13px; background-color: #F85559; border: none; border-radius: 5px; cursor: pointer;}
+/* fruits */
+.fruits {display: flex; flex-direction: row; justify-content: space-around; align-items: center; width: 80%; margin: auto; background-color: white; border-radius: 10px; position: relative; bottom: 50px; box-shadow: 0.5px 0.5px 2px black; padding: 10px;}
+.fruits figure figcaption{text-align: center;}
+
+
+/* time */
+.time {display: flex; flex-direction: row; justify-content: space-between; align-items: center; width: 90%; margin: auto; padding: 20px 0;}
+.time .text { padding-right: px; width: 60%;}
+.text h1 {margin-bottom: 10px;}
+.text p {color: gray;}
+.clock span {font-size: 25px; font-weight: bolder;}
+.day::after {content: 'Day'; font-size: 10px; color: gray; }
+.hours::after {content: 'Hours'; font-size: 10px; color: gray; }
+.mins::after {content: 'Minutes'; font-size: 10px; color: gray; }
+.seconds::after {content: ' Seconds'; font-size: 10px; color: gray; }
+
+
+/* deal */
+.deal {display: flex; flex-direction: row; justify-content: space-around; align-items: center; width: 90%; margin: auto; margin-top: 30px;}
+.deal figure {padding: 10px; border: 0.5px solid gray; padding: 20px 50px; box-shadow: 1px 1px 1px gray;}
+.deal figure img {width: 100px; height: 100px; margin-bottom: 20px;}
+.deal figcaption {text-align: center;}
+.deal span {display: block; text-align: center; margin-top: 15px;}
+
+/* team */
+.team {height: 55vh; background: url('bgTeam.png') no-repeat scroll; background-size: 100% 150%; color: white; width: 90%; margin: auto; margin-top: 70px; border-radius: 20px;}
+.team main {background-color: rgba(0, 0, 0, 0.668); height: inherit; padding: 40px 20px; border-radius: 20px;}
+.team main h1, .team main p {margin-bottom: 20px;}
+.team main {display: flex; flex-direction: column; justify-content: center; align-items: center;}
+.team main div {display: flex; flex-direction: row; justify-content: space-around; align-items: center; margin-top: 20px;}
+.team main div figure {display: flex; flex-direction: column; justify-content: center; align-items: center; margin-left: 40px;}
+.team main div figure img {margin-bottom: 20px;}
+.team main div figure figcaption {font-size: 20px; font-weight: bolder;}
+.team main div figure span {margin-top: 10px;}
+
+/* why */
+.why {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 90%; margin: auto; margin-top: 70px; height: 50vh; margin-bottom: 50px;}
+.why>h1,.why>p {text-align: center; margin-bottom: 10px; width: 80%;}
+.why>p{margin-bottom: 30px; color: gray;}
+.whyUs {display: flex; flex-direction: row; justify-content: space-between; align-items: center; width: 100%;}
+.left, .centerImage, .right {margin-left: 20px; height: 35vh;}
+.centerImage img {height: 100%;}
+.left>h2, .right>h2 {margin-bottom: 10px;}
+.left>p, .right>p {margin-bottom: 25px;}
+.right>h2,.right>p {text-align: right;}
+
+/* footer */
+footer {margin-top: 100px; background-color: black; height: 45vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white;}
+footer .logo {display: flex; flex-direction: row; justify-content: center; align-items: center; font-size: 32px; margin-bottom: 30px;}
+.links {margin-bottom: 30px;}
+.links>a {color: white; text-decoration: none; margin-left: 30px;}
+.icon i {margin-left: 10px;}
+
+
+
+/* phone design */
+@media (max-width: 600px)
+{
+    /* navigationPane */
+    input[type=search] {display: none;}
+    .menuIcon {display: block; font-size: 30px; color: white; margin: 0 10px 0 0; cursor: pointer;}
+    nav label.logo span {font-size: 25px;}
+    nav ul {display: none;}
+    /* nav ul {position: fixed; top: 90px; right: 15%; background-color: lightseagreen; height: 100vh; width: 70%; transition: all 0.5s;}
+    nav ul a {display: block; border-radius: 0; font-size: larger; margin-top: 10px;}
+    nav ul a:hover {background-color: lightcoral;} */
+    #cb:checked ~ .menuIcon i::before {content: '\f00d';}
+    #cb:checked ~ nav ul {right: 15%;}
+
+    header {height: 35vh;}
+    header div {justify-content: center; font-size: x-small;}
+    .fruits {display: none;}
+    .time {flex-direction: column; margin-top: 20px;}
+    .deal {flex-direction: column;}
+    .deal figure {border: none; border-bottom: 2px solid black; box-shadow: none;}
+    .team {height: inherit; background-size: cover;}
+    .team main p {text-align: center;}
+    .team main div {flex-direction: column;}
+    .why {height: auto;}
+    .why .whyUs {flex-direction: column;}
+    .left {order: 3;}
+    .right {order: 3; margin-top: 40px;}
+    .centerImage {order: 1;}
+    .left, .right {text-align: center;}
+    .right>h2,.right>p {text-align: center;}
+    .links {display: flex; flex-direction: row; justify-content: center; align-items: center;}
+    .links a {font-size: x-small; margin-left: 15px;}
+}
